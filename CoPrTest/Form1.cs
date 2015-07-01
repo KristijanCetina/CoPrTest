@@ -50,7 +50,7 @@ namespace CoPrTest
             //textBox1.Text = DateTime.Now.ToString();
 
             string textString = CoPrCommand.defineAString;
-            textString += DateTime.Now.ToString();
+            //textString += DateTime.Now.ToString();
             textString+="\x0003";
 
             listBox1.Items.Insert(0, textString);
