@@ -13,8 +13,10 @@ namespace CoPrTest
         public static string selectLargeImage = "\x0002150010000000\x0003";
         public static string selectMediumImage = "\x0002149010000000\x0003";
         public static string defineBarcode = "\x00021380138007050101161213122821029\x0003"; //"\x000213801380070509809291033\x0003"; (za karticu razduzivaca 9809291033)
+        public static string defineBarcodeRazduzivac = "\x00021380138007050980929"; //(za karticu razduzivaca 9809291033)
         public static string defineBarcodeAsCM = "\x00021380150007050101161213122821029\x0003";
         public static string defineAString = ("\x000212246043032ULAZ #666 ");//("\x000212246043032ULAZ #666 "); //ovako ga nije volja, ok prvi nakon pokretanj app. btn5
+        public static string defineAStringRazduzivac = ("\x000212246043032Kartica razduzivaca ");// za karticu razduzivaca
         public static string defineAStringAsValidator = ("\x000212258043032ExitBarCode ");
         public static string movementWithPrint = "\x00021611\x0003";
         public static string movementWithPrintRead = "\x000216114\x0003";

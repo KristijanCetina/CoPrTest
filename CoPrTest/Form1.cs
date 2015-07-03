@@ -42,19 +42,35 @@ namespace CoPrTest
 
         private void button4_Click(object sender, EventArgs e)
         {
-            serialPort1.Write(CoPrCommand.defineBarcode);
+            if (String.IsNullOrEmpty (textBox1.Text) )
+            {
+                serialPort1.Write(CoPrCommand.defineBarcode);
+            }
+            else
+            {
+                string textString = CoPrCommand.defineBarcodeRazduzivac;
+                textString += textBox1.Text + "\x0003";
+                serialPort1.Write(textString);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //textBox1.Text = DateTime.Now.ToString();
+            if (String.IsNullOrEmpty(textBox1.Text))
+            {
+                string textString = CoPrCommand.defineAString;
+                textString += DateTime.Now.ToString();
+                textString += "\x0003";
 
-            string textString = CoPrCommand.defineAString;
-            textString += DateTime.Now.ToString();
-            textString+="\x0003";
-
-            listBox1.Items.Insert(0, textString);
-            serialPort1.Write(textString.ToString());
+                listBox1.Items.Insert(0, textString);
+                serialPort1.Write(textString.ToString());
+            }
+            else
+            {
+                string textString = CoPrCommand.defineAStringRazduzivac;
+                textString += textBox1.Text + "\x0003";
+                serialPort1.Write(textString);
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
