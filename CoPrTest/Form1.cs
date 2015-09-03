@@ -289,6 +289,11 @@ namespace CoPrTest
             //System.Threading.Thread.Sleep(2800);
             //serialPort1.Write(CoPrCommand.ejectTicket);
         }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
     [Flags]public enum Error
     {
