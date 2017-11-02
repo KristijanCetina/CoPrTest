@@ -42,7 +42,7 @@ namespace CoPrTest
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty (textBox1.Text) )
+            if (string.IsNullOrEmpty (textBox1.Text) )
             {
                 serialPort1.Write(CoPrCommand.defineBarcode);
             }
@@ -56,7 +56,7 @@ namespace CoPrTest
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(textBox1.Text))
+            if (string.IsNullOrEmpty(textBox1.Text))
             {
                 string textString = CoPrCommand.defineAString;
                 textString += DateTime.Now.ToString();
